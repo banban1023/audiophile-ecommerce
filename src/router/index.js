@@ -1,0 +1,41 @@
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+
+Vue.use(VueRouter)
+
+const routes = [
+  {
+    path: '/',
+    name: 'index',
+    component: () => import('../views/home/index.vue'),
+    redirect: 'home',
+    children: [
+      {
+        path: '/home',
+        name: 'home',
+        component: () => import('../views/home/home.vue')
+      },
+      {
+        path: '/headphones',
+        name: 'headphones',
+        component: () => import('../views/home/headphones.vue')
+      },
+      {
+        path: '/speakers',
+        name: 'speakers',
+        component: () => import('../views/home/speakers.vue')
+      },
+      {
+        path: '/earphones',
+        name: 'earphones',
+        component: () => import('../views/home/earphones.vue')
+      }
+    ]
+  }
+]
+
+const router = new VueRouter({
+  routes
+})
+
+export default router

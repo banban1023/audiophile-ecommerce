@@ -1,0 +1,57 @@
+.home header {
+  padding-top: 198px;
+  width: 100%;
+  min-height: 600px;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  background: url('../assets/home/mobile/image-header.jpg') no-repeat center top / cover;
+}
+.home header .product_intro {
+  width: 328px;
+  margin: 0 auto;
+}
+.home header .product_intro .new_pro {
+  font-size: 14px;
+  text-align: center;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  color: #FFFFFF;
+  opacity: 0.4964;
+}
+.home header .product_intro .pro_name {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.29px;
+  color: #FFFFFF;
+  margin-top: 15px;
+}
+.home header .product_intro .pro_msg {
+  font-size: 15px;
+  font-weight: 200;
+  line-height: 25px;
+  text-align: center;
+  color: #FFFFFF;
+  opacity: 0.75;
+  padding: 0 30px;
+  margin-top: 24px;
+}
+.home header .product_intro .see_pro {
+  background: #D87D4A;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+  width: 160px;
+  height: 48px;
+  margin: 28px 84px 0;
+  border: none;
+}
+.home .home_category {
+  margin-top: 550px;
+}
