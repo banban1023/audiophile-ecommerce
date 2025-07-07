@@ -17,6 +17,9 @@
       border: none;
       background-color: transparent;
     }
+    .nav_desktop {
+      display: none;
+    }
     .logo {
       background: url('../assets/shared/desktop/logo.svg') no-repeat;
       font-size: 0;
@@ -38,7 +41,7 @@
     width: 100%;
     height: calc(100% - 89px);
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 2; // 一定要比 .pupop_nav 低，且低于 .nav 的 z-index: 10
+    z-index: 2;
   }
   .pupop_nav {
     position: absolute;
@@ -51,10 +54,62 @@
     font-size: 0;
     transition: all 0.5s ease;
     z-index: 3;
+    pointer-events: none; // 不接受鼠标事件
   }
   .pupop_nav.active {
     font-size: 18px;
     height: 750px;
     opacity: 1;
+    pointer-events: auto; // 激活后才接受鼠标事件
+  }
+}
+
+@media (min-width: 768px) {
+  .index_nav {
+    .nav {
+      .logo {
+        position: absolute;
+        top: 32px;
+        left: 97px;
+      }
+    }
+    .pupop_nav.active {
+      height: 340px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .index_nav {
+    .nav {
+      height: 96px;
+      margin: 0 auto;
+      width: 1110px;
+      padding: 0;
+      .mobile_nav {
+        display: none;
+      }
+      .logo {
+        position: static;
+      }
+      .nav_desktop {
+        display: flex;
+        position: absolute;
+        top: 35px;
+        left: 340px;
+        width: 429px;
+        justify-content: space-between;
+        li {
+          a {
+            font-size: 13px;
+            font-weight: bold;
+            line-height: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #FFFFFF;
+          }
+        }
+      }
+    }
   }
 }

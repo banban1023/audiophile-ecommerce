@@ -17,6 +17,9 @@
   border: none;
   background-color: transparent;
 }
+.index_nav .nav .nav_desktop {
+  display: none;
+}
 .index_nav .nav .logo {
   background: url('../assets/shared/desktop/logo.svg') no-repeat;
   font-size: 0;
@@ -50,9 +53,51 @@
   font-size: 0;
   transition: all 0.5s ease;
   z-index: 3;
+  pointer-events: none;
 }
 .index_nav .pupop_nav.active {
   font-size: 18px;
   height: 750px;
   opacity: 1;
+  pointer-events: auto;
+}
+@media (min-width: 768px) {
+  .index_nav .nav .logo {
+    position: absolute;
+    top: 32px;
+    left: 97px;
+  }
+  .index_nav .pupop_nav.active {
+    height: 340px;
+  }
+}
+@media (min-width: 1440px) {
+  .index_nav .nav {
+    height: 96px;
+    margin: 0 auto;
+    width: 1110px;
+    padding: 0;
+  }
+  .index_nav .nav .mobile_nav {
+    display: none;
+  }
+  .index_nav .nav .logo {
+    position: static;
+  }
+  .index_nav .nav .nav_desktop {
+    display: flex;
+    position: absolute;
+    top: 35px;
+    left: 340px;
+    width: 429px;
+    justify-content: space-between;
+  }
+  .index_nav .nav .nav_desktop li a {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+  }
 }

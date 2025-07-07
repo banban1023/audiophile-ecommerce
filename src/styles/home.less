@@ -2,11 +2,11 @@
   header {
     padding-top: 198px;
     width: 100%;
-    min-height: 600px;
+    height: 600px;
     position: absolute;
     top: 0;
-    z-index: -1;
-    background: url('../assets/home/mobile/image-header.jpg') no-repeat center top/ cover;
+    z-index: 1;
+    background: url('../assets/home/mobile/image-header.jpg') no-repeat center center/ cover;
     .product_intro {
       width: 328px;
       margin: 0 auto;
@@ -39,7 +39,7 @@
         padding: 0 30px;
         margin-top: 24px;
       }
-      .see_pro {
+      .see_pro1 {
         background: @origy-bgc;
         font-size: 13px;
         font-weight: bold;
@@ -68,6 +68,7 @@
       display: flex;
       align-items: center;
       flex-direction: column;
+      position: relative;
       .pattern_circles {
         position: absolute;
         width: 558px;
@@ -78,6 +79,7 @@
         margin: 55px 0 0;
         width: 169px;
         height: 202px;
+        background: url('../assets/home/mobile/image-speaker-zx9.png') center center /cover;
       }
       .see_title {
         font-size: 36px;
@@ -100,6 +102,8 @@
         margin-top: 24px;
       }
       .see_pro {
+        position: absolute;
+        z-index: 3;
         width: 160px;
         height: 48px;
         background-color: #000;
@@ -109,7 +113,11 @@
         letter-spacing: 1px;
         color: #FFFFFF;
         border: none;
-        margin-top: 24px;
+        top: 0px;
+        left: 0px;
+        top: 497px;
+        left: 50%;
+        transform: translate(-50%);
       }
     }
     .pro_two {
@@ -125,6 +133,7 @@
         position: absolute;
         object-fit: cover;
         z-index: -1;
+        background: url('../assets/home/mobile/image-speaker-zx7.jpg') no-repeat center center / cover;
       }
       .see_title {
         padding: 101px 0 0 24px;
@@ -153,6 +162,7 @@
         object-fit: cover;
         border-radius: 8px;
         vertical-align: top;
+        background: url('../assets/home/mobile/image-earphones-yx1.jpg') no-repeat center center/cover;
       }
       .pro_intro {
         height: 200px;
@@ -179,6 +189,123 @@
           border: 1px solid #000000;
         }
       }
+    }
+  }
+  .store {
+    margin-top: 120px;
+  }
+  .share {
+    margin-top: 120px;
+  }
+}
+
+@media (min-width: 768px) {
+  .home {
+    header {
+      height: 729px;
+      background: url('../assets/home/tablet/image-header.jpg') no-repeat center center/ cover;
+      .product_intro {
+        .pro_name {
+          font-size: 56px;
+          width: 396px;
+          line-height: 58px;
+          letter-spacing: 2px;
+          margin-top: 23px;
+        }
+        .pro_msg {
+          width: 349px;
+          padding: 0;
+        }
+      }
+    }
+    .home_category {
+      margin-top: 735px;
+    }
+    .home_see {
+      margin: 96px 40px 0;
+      .pro_one {
+        height: 720px;
+        .pattern_circles {
+          width: 944px;
+          height: 944px;
+          top: -288px;
+        }
+        .see_img {
+          background: url('../assets/home/tablet/image-speaker-zx9.png') no-repeat center center/cover;
+          width: 197px;
+          height: 237px;
+        }
+        .see_title {
+          margin-top: 64px;
+          font-size: 56px;
+          line-height: 58px;
+          letter-spacing: 2px;
+        }
+        .see_msg {
+          width: 340px;
+        }
+        .see_pro {
+          top: 608px;
+        }
+      }
+      .pro_two {
+        margin-top: 32px;
+        .see_img {
+          background: url('../assets/home/tablet/image-speaker-zx7.jpg') no-repeat center center / cover;
+        }
+        .see_title {
+          padding-left: 62px;
+        }
+        .see_pro {
+          margin-left: 62px;
+        }
+      }
+      .pro_three {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 32px;
+        .see_img {
+          min-width: 339px;
+          margin: 0;
+          height: 320px;
+          margin-right: 11px;
+          background: url('../assets/home/tablet/image-earphones-yx1.jpg') no-repeat center center / cover;
+        }
+        .pro_intro {
+          min-width: 339px;
+          margin: 0;
+          height: 320px;
+          padding-top: 101px;
+        }
+      }
+    }
+    .store {
+      margin-top: 96px;
+    }
+    .share {
+      margin-top: 96px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .home {
+    header {
+      height: 729px;
+      background: url('../assets/home/desktop/image-hero.jpg') no-repeat center top/ cover;
+      padding: 225px 0 0 165px;
+      .product_intro {
+        margin: 0;
+        .new_pro, .pro_msg, .pro_name {
+          text-align: left;
+        }
+        .see_pro1 {
+          margin: 40px 0 0 0;
+        }
+      }
+    }
+    .home_category {
+      margin-top: 849px;
     }
   }
 }

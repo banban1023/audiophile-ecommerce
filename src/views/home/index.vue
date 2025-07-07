@@ -3,6 +3,12 @@
     <div class="nav">
       <button class="mobile_nav" @click.stop="showPopup" ref="trigger">nav button</button>
       <router-link to="/home"><h1 class="logo">audiophile</h1></router-link>
+      <ul class="nav_desktop">
+        <li><router-link to="/home">HOME</router-link></li>
+        <li v-for="item in linkList" :key="item.name">
+          <router-link :to="item.to">{{item.name}}</router-link>
+        </li>
+      </ul>
       <button class="nav_cart">cart</button>
     </div>
     <div v-if="show" class="popup_backdrop" @click="closePopup"></div>
@@ -10,7 +16,7 @@
       :class="['pupop_nav', { active: show }]"
       ref="popup"
     >
-      <!-- <router-link to="home">HOME</router-link> -->
+      <!-- <router-link to="/home">HOME</router-link> -->
       <LittleCard></LittleCard>
     </section>
     <router-view></router-view>

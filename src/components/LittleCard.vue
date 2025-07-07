@@ -47,7 +47,6 @@ export default {
   .little_card {
     position: relative;
     width: 327px;
-    // height: 217px;
     left: 50%;
     top: 32px;
     transform: translateX(-50%);
@@ -56,7 +55,6 @@ export default {
       position: absolute;
       width: 200px;
       height: 100px;
-      // filter: blur(43.49px);
       top: 20px;
       left: 50%;
       transform: translateX(-50%);
@@ -102,5 +100,40 @@ export default {
       }
     }
   }
+}
+
+@media (min-width: 768px) {
+  .cate_card {
+    display: flex;
+    height: 100%;
+    padding: 0 40px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    .little_card {
+      top: 0;
+      left: 0;
+      transform: none;
+      width: 100%;
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+.cate_card {
+  padding: 0 165px;
+  .little_card {
+    .pro_img {
+      height: 160px;
+    }
+    .pro_bgc {
+      height: 204px;
+    }
+  }
+}
 }
 </style>
