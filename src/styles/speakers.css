@@ -1,0 +1,42 @@
+.speakers header {
+  position: absolute;
+  height: 192px;
+  width: 100%;
+  background-color: #000;
+  top: 0;
+  left: 0;
+}
+.speakers header .speakers_title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+  margin: 122px auto;
+}
+.speakers main {
+  padding: 166px 24px 0;
+}
+.speakers main .goodscard {
+  margin-bottom: 120px;
+}
+.speakers footer .store {
+  margin-top: 80px;
+}
+.speakers footer .share {
+  margin-top: 120px;
+}
+@media (min-width: 1440px) {
+  .speakers main .goodscard {
+    width: 1110px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto 120px;
+    margin-bottom: 160px;
+  }
+  .speakers main .goodscard:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+}

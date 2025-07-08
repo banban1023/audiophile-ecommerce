@@ -38,4 +38,10 @@ const router = new VueRouter({
   routes
 })
 
+router.afterEach((to, from) => {
+  window.scrollTo(0, 0)
+  // 平滑滚动：
+  // window.scrollTo({ top: 0, behavior: 'smooth' })
+})
+
 export default router

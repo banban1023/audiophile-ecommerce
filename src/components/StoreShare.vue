@@ -152,7 +152,7 @@ export default {
         margin: 56px 0 48px;
       }
       .share_button {
-        margin: 0 165px 136px 0;
+        margin: 0 0 136px 0;
       }
     }
   }
