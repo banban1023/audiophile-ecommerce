@@ -120,11 +120,39 @@ export default {
       align-items: flex-end;
       justify-content: space-between;
       .share_msg {
-        margin-top: 80px;
+        margin: 80px 0 46px;
         display: inline-block;
       }
       .share_button {
-        margin: 0;
+        margin: 0 0 46px 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .share {
+    padding: 0 165px;
+    position: relative;
+    .share_logo {
+      margin-top: 75px;
+    }
+    .share_nav {
+      position: absolute;
+      top: 75px;
+      right: 165px;
+      margin: 0;
+    }
+    .share_intro {
+      width: 530px;
+      margin-top: 36px;
+    }
+    .share--flex {
+      .share_msg {
+        margin: 56px 0 48px;
+      }
+      .share_button {
+        margin: 0 165px 136px 0;
       }
     }
   }

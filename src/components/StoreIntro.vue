@@ -70,4 +70,33 @@ export default {
     }
   }
 }
+
+@media (min-width: 1440px) {
+  .store {
+    padding: 0 165px;
+    display: flex;
+    flex-direction: row-reverse;
+    height: 588px;
+    justify-content: space-between;
+    .store_img {
+      width: 588px;
+      height: 588px;
+      background: url('../assets/shared/desktop/image-best-gear.jpg') no-repeat center center / cover;
+    }
+    .store_intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .store_title {
+        margin-top: 0;
+        text-align: left;
+        width: 445px;
+      }
+      .store_msg {
+        text-align: left;
+        width: 445px;
+      }
+    }
+  }
+}
 </style>

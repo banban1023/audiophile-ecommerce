@@ -15,13 +15,13 @@
     </section>
     <section class="home_see">
       <div class="pro_one">
+        <img src="@/assets/home/desktop/pattern-circles.svg" alt="" class="pattern_circles">
         <div class="see_img"></div>
         <h2 class="see_title">ZX9 <br> SPEAKER</h2>
         <p class="see_msg">
           Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.
         </p>
         <button class="see_pro">SEE PRODUCT</button>
-        <img src="@/assets/home/desktop/pattern-circles.svg" alt="" class="pattern_circles">
       </div>
       <div class="pro_two">
         <div class="see_img"></div>

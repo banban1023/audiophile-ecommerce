@@ -129,9 +129,16 @@ export default {
   .little_card {
     .pro_img {
       height: 160px;
+      top: -80px;
     }
     .pro_bgc {
       height: 204px;
+      .pto_title {
+        top: 116px;
+      }
+      .pro_into {
+        top: 156px;
+      }
     }
   }
 }
