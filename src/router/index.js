@@ -31,6 +31,11 @@ const routes = [
         component: () => import('../views/home/earphones.vue')
       }
     ]
+  },
+  {
+    path: '/detail',
+    name: 'detail',
+    component: () => import('../views/detail/detail.vue')
   }
 ]
 

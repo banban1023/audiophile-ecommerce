@@ -1,13 +1,27 @@
 <template>
-  <div class="detail">detail</div>
+  <div class="detail">
+    <header>
+      <NavCom></NavCom>
+    </header>
+  </div>
 </template>
 
 <script>
+import NavCom from '@/components/NavCom.vue'
 export default {
-  name: 'ProduceDetail'
+  name: 'ProduceDetail',
+  components: {
+    NavCom
+  }
 }
 </script>
 
-<style>
+<style lang="less" scoped>
+.detail {
+  header {
+    height: 90px;
+    background: #000;
+  }
+}
 
 </style>
