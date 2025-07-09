@@ -57,7 +57,7 @@
     }
     .de_img {
       margin-top: 88px;
-      .img_one {
+      .img_nei {
         vertical-align: top;
         width: 100%;
         border-radius: 8px;
@@ -76,8 +76,10 @@
         color: #000000;
         margin-bottom: 40px;
       }
-      .maylike {
-        margin-bottom: 56px;
+      .like_list {
+        .maylike {
+          margin-bottom: 56px;
+        }
       }
     }
   }
@@ -87,6 +89,115 @@
     }
     .share {
       margin-top: 120px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .detail {
+    main {
+      padding: 0 40px;
+      .de_features {
+        margin-top: 120px;
+        .features_title {
+          font-size: 32px;
+        }
+        .features_msg {
+          margin-top: 32px;
+        }
+      }
+      .de_box {
+        margin-top: 120px;
+        width: 549px;
+        display: flex;
+        justify-content: space-between;
+        .box_title {
+          font-size: 32px;
+        }
+        .box_contain {
+          margin: 0;
+          li {
+            margin: 0 0 8px 0;
+          }
+        }
+      }
+      .de_img {
+        display: grid;
+        grid-template-columns: 7fr 9.8fr;
+        width: 100%;
+        max-width: 1000px;
+        margin: 153px auto 0;
+        // grid-template-rows: 1fr 2fr;
+        gap: 20px;
+        grid-template-areas:
+          "left-top right"
+          "left-bottom right";
+        .img_nei {
+          margin: 0;
+        }
+        .img_one {
+          grid-area: left-top;
+        }
+        .img_two {
+          grid-area: left-bottom;
+        }
+        .img_three {
+          grid-area: right;
+        }
+      }
+      .may_like {
+        margin-top: 120px;
+        .like_title {
+          width: 100%;
+          margin-bottom: 56px;
+        }
+        .like_list {
+          max-width: 1000px;
+          margin: 0 auto;
+          display: flex;
+          .maylike {
+            margin: 0 11px 0 0;
+            &:last-child {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .detail {
+    main {
+      padding: 0 165px;
+      .detail_back {
+        margin: 79px 0 56px;
+      }
+      .desk--flex {
+        display: flex;
+        .de_features {
+          width: 635px;
+          margin-right: 125px;
+        }
+        .de_box {
+          display: block;
+          .box_title {
+            margin-bottom: 32px;
+          }
+        }
+      }
+      .de_img {
+        max-width: 100%;
+      }
+      .may_like {
+        margin-top: 160px;
+        .like_list {
+          justify-content: space-between;
+          max-width: 100%;
+          margin: 0;
+        }
+      }
     }
   }
 }

@@ -127,4 +127,49 @@ export default {
     }
   }
 }
+@media (min-width: 768px) {
+  .detail_card {
+    display: flex;
+    .de_img {
+      height: 480px;
+      width: 281px;
+      margin-right: 69px;
+    }
+    .de_intro {
+      align-self: center;
+      .de_subtitle {
+        margin: 0;
+      }
+      .de_title {
+        width: 220px;
+        font-size: 28px;
+        margin-top: 16px;
+      }
+      .de_msg {
+        margin-top: 32px;
+      }
+      .de_price {
+        margin-top: 32px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .detail_card {
+    .de_img {
+      width: 540px;
+      margin-right: 125px;
+    }
+    .de_intro {
+      .de_title {
+        font-size: 40px;
+        width: 300px;
+      }
+      .addcard {
+        margin-top: 47px;
+      }
+    }
+  }
+}
 </style>

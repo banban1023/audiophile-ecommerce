@@ -38,6 +38,7 @@ export default {
   .like_img {
     width: 100%;
     border-radius: 8px;
+    vertical-align: top;
   }
   .like_title {
     margin-top: 32px;
@@ -60,6 +61,14 @@ export default {
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #FFFFFF;
+  }
+}
+
+@media (min-width: 768px) {
+  .maylike {
+    .like_title {
+      margin-top: 40px;
+    }
   }
 }
 </style>
