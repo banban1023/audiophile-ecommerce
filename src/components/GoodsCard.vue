@@ -20,7 +20,7 @@
       <p class="goods_msg">
         {{item.msg}}
       </p>
-      <button class="goods_godetail">SEE PRODUCT</button>
+      <button @click="$router.push(`/detail/${item.id}`)" class="goods_godetail">SEE PRODUCT</button>
     </article>
   </div>
 </template>

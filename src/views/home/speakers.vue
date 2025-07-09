@@ -28,6 +28,7 @@ export default {
     return {
       goodsList: [
         {
+          id: 6,
           img: {
             mobile: require('@/assets/shared/tablet/image-zx9-speaker.jpg'),
             tablet: require('@/assets/shared/mobile/image-zx9-speaker.jpg'),
@@ -38,6 +39,7 @@ export default {
           msg: 'Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.'
         },
         {
+          id: 5,
           img: {
             mobile: require('@/assets/shared/tablet/image-zx7-speaker.jpg'),
             tablet: require('@/assets/shared/mobile/image-zx7-speaker.jpg'),

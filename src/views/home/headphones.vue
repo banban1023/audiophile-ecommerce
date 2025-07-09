@@ -4,7 +4,7 @@
       <h2 class="headphones_title">HEADPHONES</h2>
     </header>
     <main>
-      <GoodsCard v-for="item in goodsList" :key="item.title" :item="item"></GoodsCard>
+      <GoodsCard v-for="item in goodsList" :key="item.id" :item="item"></GoodsCard>
       <LittleCard></LittleCard>
     </main>
     <footer>
@@ -28,6 +28,7 @@ export default {
     return {
       goodsList: [
         {
+          id: 4,
           img: {
             mobile: require('@/assets/shared/tablet/image-xx99-mark-two-headphones.jpg'),
             tablet: require('@/assets/shared/mobile/image-xx99-mark-two-headphones.jpg'),
@@ -38,6 +39,7 @@ export default {
           msg: 'The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.'
         },
         {
+          id: 3,
           img: {
             mobile: require('@/assets/shared/tablet/image-xx99-mark-one-headphones.jpg'),
             tablet: require('@/assets/shared/mobile/image-xx99-mark-one-headphones.jpg'),
@@ -47,6 +49,7 @@ export default {
           msg: 'As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.'
         },
         {
+          id: 2,
           img: {
             mobile: require('@/assets/shared/tablet/image-xx59-headphones.jpg'),
             tablet: require('@/assets/shared/mobile/image-xx59-headphones.jpg'),

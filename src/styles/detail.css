@@ -1,0 +1,46 @@
+.detail header {
+  height: 90px;
+  background: #000;
+}
+.detail main {
+  padding: 0 24px;
+}
+.detail main .detail_back {
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: normal;
+  color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+  font-weight: 500;
+  border: none;
+  margin: 16px 0 24px;
+}
+.detail main .de_features {
+  margin-top: 88px;
+}
+.detail main .de_features .features_title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 36px;
+  text-transform: uppercase;
+  letter-spacing: 0.86px;
+}
+.detail main .de_features .features_msg {
+  margin-top: 24px;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.5);
+}
+.detail main .de_box .box_title {
+  font-size: 24px;
+  line-height: 36px;
+  text-transform: uppercase;
+  letter-spacing: 0.86px;
+}
+.detail main .de_box .box_contain li {
+  font-size: 15px;
+  line-height: 25px;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+}

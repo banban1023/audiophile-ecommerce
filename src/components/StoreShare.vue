@@ -91,7 +91,7 @@ export default {
     line-height: 25px;
   }
   .share_button {
-    margin: 48px 0 38px;
+    margin: 48px auto 38px;
     display: flex;
     width: 104px;
     justify-content: space-between;

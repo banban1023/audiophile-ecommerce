@@ -28,6 +28,7 @@ export default {
     return {
       goodsList: [
         {
+          id: 1,
           img: {
             mobile: require('@/assets/product-yx1-earphones/mobile/image-category-page-preview.jpg'),
             tablet: require('@/assets/product-yx1-earphones/tablet/image-category-page-preview.jpg'),

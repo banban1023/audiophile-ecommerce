@@ -1,4 +1,5 @@
 import Vue from 'vue'
-import { Popup } from 'vant'
+import { Popup, Stepper } from 'vant'
 
+Vue.use(Stepper)
 Vue.use(Popup)
