@@ -1,0 +1,41 @@
+.checkout {
+  background-color: #FAFAFA;
+}
+.checkout header {
+  height: 90px;
+  background: #000;
+}
+.checkout main {
+  padding: 16px 24px 97px;
+}
+.checkout main .go_back {
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: normal;
+  color: rgba(0, 0, 0, 0.5);
+  border: none;
+}
+.checkout main .checkout_form {
+  background-color: #fff;
+  border-radius: 8px;
+  margin-top: 24px;
+}
+.checkout main .checkout_form form {
+  padding: 24px;
+}
+.checkout main .checkout_form form .form_title {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.checkout main .checkout_form form .form_subtitle {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 25px;
+  text-transform: uppercase;
+  letter-spacing: 0.93px;
+  color: #D87D4A;
+}
