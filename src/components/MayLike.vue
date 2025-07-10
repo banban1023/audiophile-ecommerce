@@ -15,7 +15,7 @@
       >
     </picture>
     <h4 class="like_title">{{item.name}}</h4>
-    <button class="like_btn">SEE PRODUCT</button>
+    <button class="like_btn" @click="$router.push(`/detail/${item.id}`)">SEE PRODUCT</button>
   </div>
 </template>
 
@@ -26,6 +26,9 @@ export default {
       type: Object,
       required: true
     }
+  },
+  created () {
+    console.log(this.item)
   }
 }
 </script>

@@ -7,7 +7,7 @@
         <p class="pro_msg">
           Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.
         </p>
-        <button class="see_pro1">SEE PRODUCT</button>
+        <button @click="$router.push('/detail/4')" class="see_pro1">SEE PRODUCT</button>
       </article>
     </header>
     <section class="home_category">
@@ -21,18 +21,18 @@
         <p class="see_msg">
           Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.
         </p>
-        <button class="see_pro">SEE PRODUCT</button>
+        <button @click="$router.push('/detail/6')" class="see_pro">SEE PRODUCT</button>
       </div>
       <div class="pro_two">
         <div class="see_img"></div>
         <h2 class="see_title">ZX7 SPEAKER</h2>
-        <button class="see_pro">SEE PRODUCT</button>
+        <button @click="$router.push('/detail/5')" class="see_pro">SEE PRODUCT</button>
       </div>
       <div class="pro_three">
         <div class="see_img"></div>
         <div class="pro_intro">
           <h2 class="see_title">YX1 EARPHONES</h2>
-          <button class="see_pro">SEE PRODUCT</button>
+          <button @click="$router.push('/detail/1')" class="see_pro">SEE PRODUCT</button>
         </div>
       </div>
     </section>

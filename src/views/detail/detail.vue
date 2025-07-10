@@ -3,13 +3,13 @@
     <header>
       <NavCom></NavCom>
     </header>
-    <main>
+    <main v-if="goodsDetail" >
       <button class="detail_back" @click="$router.go(-1)">Go Back</button>
       <DetailCard :item="goodsDetail"></DetailCard>
       <section class="desk--flex">
         <article class="de_features">
           <h3 class="features_title">FEATURES</h3>
-          <p class="features_msg" v-html="formatFeatures(goodsDetail.features)">
+          <p v-if="goodsDetail" class="features_msg" v-html="formatFeatures(goodsDetail.features)">
           </p>
         </article>
         <section class="de_box">
@@ -73,6 +73,7 @@
       </section>
     </main>
     <footer>
+      <LittleCard></LittleCard>
       <StoreIntro></StoreIntro>
       <StoreShare></StoreShare>
     </footer>
@@ -86,10 +87,11 @@ import MayLike from '@/components/MayLike.vue'
 import StoreShare from '@/components/StoreShare.vue'
 import StoreIntro from '@/components/StoreIntro.vue'
 import Data from '@/db/data.json'
+import LittleCard from '@/components/LittleCard.vue'
 export default {
   name: 'ProduceDetail',
   components: {
-    NavCom, DetailCard, MayLike, StoreShare, StoreIntro
+    NavCom, DetailCard, MayLike, StoreShare, StoreIntro, LittleCard
   },
   data () {
     return {
@@ -97,18 +99,38 @@ export default {
     }
   },
   created () {
-    this.goodsDetail = Data[this.listId]
-    console.log(this.goodsDetail)
+    this.loadDetail()
   },
   computed: {
     listId () {
       return this.$route.params.id - 1
     }
   },
+  watch: {
+    '$route.params.id': {
+      handler: 'loadDetail',
+      immediate: true
+    }
+  },
   methods: {
     // 段落换行
     formatFeatures (text) {
       return text.replace(/\n/g, '<br>') // 替换 \n 为 <br>
+    },
+    // 加上id
+    loadDetail (id = this.$route.params.id) {
+      const index = id - 1
+      this.goodsDetail = Data[index]
+
+      if (this.goodsDetail) {
+        this.goodsDetail.others = this.goodsDetail.others.map(other => {
+          const match = Data.find(product => product.slug === other.slug)
+          return {
+            ...other,
+            id: match ? match.id : null
+          }
+        })
+      }
     }
   }
 }

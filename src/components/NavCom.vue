@@ -32,9 +32,9 @@ export default {
     return {
       show: false,
       linkList: [
-        { to: 'headphones', name: 'HEADPHONES' },
-        { to: 'speakers', name: 'SPEAKERS' },
-        { to: 'earphones', name: 'EARPHONES' }
+        { to: '/headphones', name: 'HEADPHONES' },
+        { to: '/speakers', name: 'SPEAKERS' },
+        { to: '/earphones', name: 'EARPHONES' }
       ]
     }
   },
@@ -145,8 +145,8 @@ export default {
 }
 
 @media (min-width: 768px) {
-  .index_nav {
-    .nav {
+  .nav {
+    .nav_header {
       .logo {
         position: absolute;
         top: 32px;
@@ -160,37 +160,37 @@ export default {
 }
 
 @media (min-width: 1440px) {
-  .index_nav {
     .nav {
       height: 96px;
       margin: 0 165px;
       width: calc(100% - 330px);
       padding: 0;
-      .mobile_nav {
-        display: none;
-      }
-      .logo {
-        position: static;
-      }
-      .nav_desktop {
-        display: flex;
-        position: absolute;
-        top: 35px;
-        left: 340px;
-        width: 429px;
-        justify-content: space-between;
-        li {
-          a {
-            font-size: 13px;
-            font-weight: bold;
-            line-height: 25px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #FFFFFF;
+      .nav_header {
+        .mobile_nav {
+          display: none;
+        }
+        .logo {
+          position: static;
+        }
+        .nav_desktop {
+          display: flex;
+          position: absolute;
+          top: 35px;
+          left: 340px;
+          width: 429px;
+          justify-content: space-between;
+          li {
+            a {
+              font-size: 13px;
+              font-weight: bold;
+              line-height: 25px;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+              color: #FFFFFF;
+            }
           }
         }
       }
     }
-  }
 }
 </style>
