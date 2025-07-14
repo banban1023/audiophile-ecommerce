@@ -64,6 +64,7 @@ export default {
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #FFFFFF;
+    cursor: pointer;
   }
 }
 

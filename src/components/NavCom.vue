@@ -9,29 +9,37 @@
           <router-link :to="item.to">{{item.name}}</router-link>
         </li>
       </ul>
-      <button class="nav_cart" @click="showCartBox">cart</button>
+      <div class="dian">
+        <button class="nav_cart" @click="showCartBox">cart</button>
+        <span class="count" v-if="totalCount">{{totalCount}}</span>
+      </div>
       <van-popup v-model="showCart">
         <section class="cart_header">
-          <h4 class="cart_title">CART(3)</h4>
+          <h4 class="cart_title">CART({{totalCount}})</h4>
           <button class="clear_all">Remove all</button>
         </section>
         <section class="cart_card">
           <ul class="carts">
-            <li>
-              <img class="cart_img" src="@/assets/cart/image-xx99-mark-one-headphones.jpg" alt="">
+            <li v-for="item in cartItems" :key="item.id">
+              <img class="cart_img" :src="item.image.mobile | fixAssetPath" alt="">
               <div class="name_price">
-                <div class="cart_name">XX99 MK II</div>
-                <div class="cart_price">$ 2,999</div>
+                <div class="cart_name">{{item.name}}</div>
+                <div class="cart_price">$ {{item.price}}</div>
               </div>
-              <van-stepper v-model="addCount" />
+              <van-stepper
+                min='0'
+                :value="getItemCount(item.id)"
+                @change="updateItemCount(item.id, $event)"
+                integer
+              />
             </li>
           </ul>
         </section>
         <section class="cart_total">
           <h5 class="total_title">TOTAL</h5>
-          <p class="total_price">$ 5,396</p>
+          <p class="total_price">$ {{totalPrice}}</p>
         </section>
-        <button class="cart_checkout">CHECKOUT</button>
+        <button class="cart_checkout" @click="$router.push('/checkout')">CHECKOUT</button>
       </van-popup>
     </div>
     <div v-if="show" class="popup_backdrop" @click="closePopup"></div>
@@ -48,6 +56,8 @@
 <script>
 import { Notify } from 'vant'
 import LittleCard from '@/components/LittleCard.vue'
+import products from '@/db/data.json'
+import { mapGetters } from 'vuex'
 export default {
   components: {
     LittleCard
@@ -62,10 +72,33 @@ export default {
       ],
       showCart: false,
       cart: [],
-      addCount: 1
+      addCount: 1,
+      products
+    }
+  },
+  computed: {
+    ...mapGetters({
+      getItemCount: 'cart/getItemCount'
+    }),
+    cartItems () {
+      const cart = this.$store.getters['cart/getCart']
+      return Object.values(cart).map(({ item, count }) => ({
+        ...item,
+        count
+      }))
+    },
+    totalPrice () {
+      return this.cartItems.reduce((sum, i) => sum + i.count * i.price, 0)
+    },
+    totalCount () {
+      return this.$store.getters['cart/totalCount']
     }
   },
   methods: {
+    /* 改变商品数量 */
+    updateItemCount (id, count) {
+      this.$store.commit('cart/updateItemCount', { id, count })
+    },
     // 打开导航
     showPopup () {
       this.show = true
@@ -103,6 +136,7 @@ export default {
   mounted () {
     // 关闭导航
     document.addEventListener('click', this.handleDocumentClick)
+    console.log(this.cartItems, 0)
   },
   beforeDestroy () {
     // 关闭导航
@@ -141,13 +175,30 @@ export default {
       width: 143px;
       height: 25px;
     }
-    .nav_cart {
+    .dian {
+      position: relative;
+      .nav_cart {
       background: url('../assets/shared/desktop/icon-cart.svg') no-repeat;
       width: 23px;
       height: 20px;
       font-size: 0;
       border: none;
+      cursor: pointer;
     }
+    .count {
+      position: absolute;
+      top: -2px;
+      right: -10px;
+      display: inline-block;
+      background-color: red;
+      color: #fff;
+      height: 16px;
+      padding: 0 6px;
+      font-size: 12px;
+      line-height: 16px;
+      border-radius: 8px;
+    }
+     }
   }
   .popup_backdrop {
     position: fixed;
@@ -264,6 +315,7 @@ export default {
       text-transform: uppercase;
       letter-spacing: 1px;
       color: #FFFFFF;
+      cursor: pointer;
     }
   }
 }

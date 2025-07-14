@@ -23,17 +23,17 @@ export default {
         {
           img: require('@/assets/shared/desktop/image-category-thumbnail-headphones.png'),
           title: 'HEADPHONES',
-          to: 'headphones'
+          to: '/headphones'
         },
         {
           img: require('@/assets/shared/desktop/image-category-thumbnail-speakers.png'),
           title: 'SPEAKERS',
-          to: 'speakers'
+          to: '/speakers'
         },
         {
           img: require('@/assets/shared/desktop/image-category-thumbnail-earphones.png'),
           title: 'EARPHONES',
-          to: 'earphones'
+          to: '/earphones'
         }
       ]
     }

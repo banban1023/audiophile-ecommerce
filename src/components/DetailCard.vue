@@ -25,7 +25,7 @@
       </div>
       <div class="addcard">
         <van-stepper v-model="addCount" />
-        <button class="de_addcart">ADD TO CART</button>
+        <button @click="addToCart(item)" class="de_addcart">ADD TO CART</button>
       </div>
     </article>
   </div>
@@ -42,6 +42,18 @@ export default {
     item: {
       type: Object,
       required: true
+    }
+  },
+  created () {
+    console.log(this.item)
+  },
+  methods: {
+    addToCart (item) {
+      this.$store.commit('cart/addToCart', {
+        item,
+        count: this.addCount
+      })
+      this.addCount = 1
     }
   }
 }
@@ -124,6 +136,7 @@ export default {
       letter-spacing: 1px;
       color: #FFFFFF;
       margin-left: 16px;
+      cursor: pointer;
     }
   }
 }

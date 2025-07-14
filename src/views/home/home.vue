@@ -47,14 +47,14 @@
 import LittleCard from '@/components/LittleCard.vue'
 import StoreIntro from '@/components/StoreIntro.vue'
 import StoreShare from '@/components/StoreShare.vue'
-import Data from '@/db/data.json'
+// import Data from '@/db/data.json'
 export default {
   name: 'HomeView',
   components: {
     LittleCard, StoreIntro, StoreShare
   },
   created () {
-    console.log(Data)
+    // console.log(Data)
   }
 }
 </script>

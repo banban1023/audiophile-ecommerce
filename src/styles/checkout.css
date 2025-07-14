@@ -8,7 +8,7 @@
 .checkout main {
   padding: 16px 24px 97px;
 }
-.checkout main .go_back {
+.checkout main .checkout_form .go_back {
   background-color: transparent;
   font-size: 15px;
   font-weight: 600;
@@ -17,13 +17,11 @@
   color: rgba(0, 0, 0, 0.5);
   border: none;
 }
-.checkout main .checkout_form {
+.checkout main .checkout_form form {
+  padding: 24px;
   background-color: #fff;
   border-radius: 8px;
   margin-top: 24px;
-}
-.checkout main .checkout_form form {
-  padding: 24px;
 }
 .checkout main .checkout_form form .form_title {
   font-size: 28px;
@@ -38,4 +36,321 @@
   text-transform: uppercase;
   letter-spacing: 0.93px;
   color: #D87D4A;
+  margin: 32px 0 16px;
+}
+.checkout main .checkout_form form label {
+  margin-top: 24px;
+  display: inline-block;
+  width: 100%;
+}
+.checkout main .checkout_form form label:nth-of-type(1),
+.checkout main .checkout_form form label:nth-of-type(4) {
+  margin-top: 0;
+}
+.checkout main .checkout_form form label .inp_title {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: -0.21px;
+}
+.checkout main .checkout_form form label input {
+  border-radius: 8px;
+  background: transparent;
+  box-sizing: border-box;
+  border: 1px solid #CFCFCF;
+  width: 100%;
+  height: 56px;
+  margin-top: 9px;
+  padding-left: 34px;
+}
+.checkout main .checkout_form form label input::placeholder {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: -0.25px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.checkout main .checkout_form form .radio-group .inp_title {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: -0.21px;
+  color: #000000;
+  margin-bottom: 17px;
+}
+.checkout main .checkout_form form .radio-group label {
+  width: 100%;
+  height: 56px;
+  border-radius: 8px;
+  background: transparent;
+  box-sizing: border-box;
+  border: 1px solid #CFCFCF;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: -0.25px;
+  color: #000000;
+}
+.checkout main .checkout_form form .radio-group label input {
+  width: 20px;
+  height: 20px;
+  margin: 0 16px 0 0;
+}
+.checkout main .summary {
+  background-color: #fff;
+  margin-top: 32px;
+  border-radius: 8px;
+  padding: 32px 24px;
+}
+.checkout main .summary .summary_title {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.29px;
+}
+.checkout main .summary .summary_cart {
+  margin-top: 31px;
+}
+.checkout main .summary .summary_cart li {
+  display: flex;
+  align-items: center;
+}
+.checkout main .summary .summary_cart li .summary_img {
+  width: 64px;
+  height: 64px;
+  margin-right: 16px;
+}
+.checkout main .summary .summary_cart li .info {
+  flex: 1 ;
+}
+.checkout main .summary .summary_cart li .info .summary_name {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 25px;
+  letter-spacing: normal;
+}
+.checkout main .summary .summary_cart li .info .summary_price {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 25px;
+  letter-spacing: normal;
+  color: rgba(0, 0, 0, 0.5);
+}
+.checkout main .summary .summary_cart li .summary_count {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 25px;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.5);
+}
+.checkout main .summary .summary_total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 25px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 8px;
+}
+.checkout main .summary .summary_total span {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+  text-transform: uppercase;
+  color: #000000;
+}
+.checkout main .summary .summary_total:nth-of-type(1) {
+  margin-top: 32px;
+}
+.checkout main .summary .summary_total:nth-of-type(4) {
+  margin-top: 24px;
+}
+.checkout main .summary .summary_total:nth-of-type(4) span {
+  color: #D87D4A;
+}
+.checkout main .summary .continue_pay {
+  width: 100%;
+  height: 48px;
+  margin-top: 32px;
+  background: #D87D4A;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+  border: none;
+}
+.checkout .van-popup--center {
+  width: 327px;
+  border-radius: 8px;
+  padding: 31px 30px;
+}
+.checkout .van-popup--center .continue_title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 28px;
+  text-transform: uppercase;
+  letter-spacing: 0.86px;
+  margin-top: 23px;
+}
+.checkout .van-popup--center .continue_msg {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: normal;
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 16px;
+}
+.checkout .van-popup--center .continue_intro .continue_cart {
+  margin-top: 24px;
+  border-radius: 8px 8px 0 0;
+  padding: 24px;
+  background: #F1F1F1;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 25px;
+  letter-spacing: normal;
+  color: rgba(0, 0, 0, 0.5);
+}
+.checkout .van-popup--center .continue_intro .continue_cart .concart {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding-bottom: 12px;
+}
+.checkout .van-popup--center .continue_intro .continue_cart .concart .concart_img {
+  width: 50px;
+  margin-right: 16px;
+}
+.checkout .van-popup--center .continue_intro .continue_cart .concart .concart_intro {
+  flex: 1;
+}
+.checkout .van-popup--center .continue_intro .continue_cart .concart .concart_intro .concart_title {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 25px;
+  letter-spacing: normal;
+  color: #000;
+}
+.checkout .van-popup--center .continue_intro .continue_cart .continue_more {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: -0.21px;
+  margin-top: 12px;
+  text-align: center;
+}
+.checkout .van-popup--center .continue_intro .continue_total {
+  border-radius: 0px 0px 8px 8px;
+  background: #000000;
+  width: 263px;
+  height: 100%;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 15px 24px 19px;
+  width: 100%;
+}
+.checkout .van-popup--center .continue_intro .continue_total span {
+  display: block;
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.checkout .van-popup--center .continue_btn {
+  margin-top: 23px;
+  width: 100%;
+  height: 48px;
+  background: #D87D4A;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+  border: none;
+}
+@media (min-width: 768px) {
+  .checkout main {
+    padding: 48px 40px 116px;
+  }
+  .checkout main .checkout_form form {
+    padding: 30px 27px;
+  }
+  .checkout main .checkout_form form label {
+    width: calc(50% - 8px);
+  }
+  .checkout main .checkout_form form label:nth-of-type(4) {
+    width: 100%;
+  }
+  .checkout main .checkout_form form label:nth-of-type(1),
+  .checkout main .checkout_form form label:nth-of-type(5),
+  .checkout main .checkout_form form label:nth-of-type(8) {
+    margin-right: 16px;
+  }
+  .checkout main .checkout_form form .radio-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  .checkout main .checkout_form form .radio-group section {
+    width: calc(50% - 8px);
+  }
+  .checkout .van-popup--center {
+    width: 540px;
+    padding: 48px;
+  }
+  .checkout .van-popup--center .continue_title {
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: 1.14px;
+    width: 300px;
+  }
+  .checkout .van-popup--center .continue_msg {
+    margin-top: 24px;
+  }
+  .checkout .van-popup--center .continue_intro {
+    display: flex;
+    margin-top: 33px;
+    height: 100%;
+    align-items: stretch;
+  }
+  .checkout .van-popup--center .continue_intro .continue_cart {
+    width: 246px;
+    margin-top: 0;
+    border-radius: 0;
+  }
+  .checkout .van-popup--center .continue_intro .continue_total {
+    border-radius: 0 8px 8px 0;
+    height: 100%;
+    padding: 0 0 40px 24px;
+    align-self: stretch;
+    height: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .checkout .van-popup--center .continue_btn {
+    margin-top: 46px;
+  }
+}
+@media (min-width: 1440px) {
+  .checkout main {
+    padding: 79px 165px 141px;
+    display: flex;
+  }
+  .checkout main .checkout_form {
+    flex: 1;
+  }
+  .checkout main .checkout_form form {
+    margin-right: 30px;
+    margin-top: 38px;
+    padding: 54px 48px;
+  }
+  .checkout main .summary {
+    width: 350px;
+    margin-top: 63px;
+    height: 100%;
+    padding: 32px 33px;
+  }
 }
