@@ -14,11 +14,11 @@
         <span class="count" v-if="totalCount">{{totalCount}}</span>
       </div>
       <van-popup v-model="showCart">
-        <section class="cart_header">
+        <section class="cart_header" v-if="totalCount">
           <h4 class="cart_title">CART({{totalCount}})</h4>
-          <button class="clear_all">Remove all</button>
+          <button class="clear_all" @click="clearCart">Remove all</button>
         </section>
-        <section class="cart_card">
+        <section class="cart_card" v-if="totalCount">
           <ul class="carts">
             <li v-for="item in cartItems" :key="item.id">
               <img class="cart_img" :src="item.image.mobile | fixAssetPath" alt="">
@@ -35,11 +35,15 @@
             </li>
           </ul>
         </section>
-        <section class="cart_total">
+        <section class="cart_total" v-if="totalCount">
           <h5 class="total_title">TOTAL</h5>
           <p class="total_price">$ {{totalPrice}}</p>
         </section>
-        <button class="cart_checkout" @click="$router.push('/checkout')">CHECKOUT</button>
+        <button v-if="totalCount" class="cart_checkout" @click="$router.push('/checkout')">CHECKOUT</button>
+        <section class="cart_null" v-else>
+          <img src="@/assets/cart/gouwucheweikong.svg" alt="">
+          <div class="null_msg">Your cart is empty.</div>
+        </section>
       </van-popup>
     </div>
     <div v-if="show" class="popup_backdrop" @click="closePopup"></div>
@@ -54,10 +58,10 @@
 </template>
 
 <script>
-import { Notify } from 'vant'
+// import { Notify } from 'vant'
 import LittleCard from '@/components/LittleCard.vue'
 import products from '@/db/data.json'
-import { mapGetters } from 'vuex'
+import { mapGetters, mapMutations } from 'vuex'
 export default {
   components: {
     LittleCard
@@ -95,6 +99,7 @@ export default {
     }
   },
   methods: {
+    ...mapMutations({ clearCart: 'cart/clearCart' }),
     /* 改变商品数量 */
     updateItemCount (id, count) {
       this.$store.commit('cart/updateItemCount', { id, count })
@@ -120,11 +125,7 @@ export default {
     },
     // 打开购物车
     showCartBox () {
-      if (!this.cart) {
-        Notify({ type: 'warning', message: 'Your cart is empty.' })
-      } else {
-        this.showCart = true
-      }
+      this.showCart = true
     }
   },
   watch: {
@@ -264,6 +265,7 @@ export default {
           display: flex;
           justify-content: space-between;
           align-items: center;
+          margin-bottom: 13px;
           .cart_img {
             width: 64px;
             height: 64px;
@@ -301,6 +303,21 @@ export default {
         line-height: normal;
         text-align: center;
         text-transform: uppercase;
+      }
+    }
+    .cart_null {
+      display: flex;
+      height: 312px;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .null_msg {
+        margin-top: 40px;
+        font-size: 25px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        color: #D87D4A;
       }
     }
     .cart_checkout {
