@@ -2,8 +2,9 @@ import Vue from 'vue'
 export default {
   namespaced: true,
   state () {
+    const storedCart = localStorage.getItem('cart')
     return {
-      cart: {} // 商品id：数量
+      cart: storedCart ? JSON.parse(storedCart) : {}
     }
   },
   getters: {
@@ -28,6 +29,7 @@ export default {
           item // 保存商品完整信息
         })
       }
+      localStorage.setItem('cart', JSON.stringify(state.cart))
     },
     updateItemCount (state, { id, count }) {
       if (count <= 0) {
@@ -35,9 +37,11 @@ export default {
       } else {
         Vue.set(state.cart[id], 'count', count)
       }
+      localStorage.setItem('cart', JSON.stringify(state.cart))
     },
     clearCart (state) {
       state.cart = {}
+      localStorage.removeItem('cart')
     }
   },
   actions: {

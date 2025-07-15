@@ -92,6 +92,10 @@ export default {
     color: #FFFFFF;
     border: none;
     margin-top: 24px;
+    cursor: pointer;
+    &:hover {
+      background: #FBAF85;
+    }
   }
 }
 

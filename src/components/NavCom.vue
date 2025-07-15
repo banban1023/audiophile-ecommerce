@@ -166,9 +166,16 @@ export default {
       background: url('../assets/shared/mobile/image-hamberger.svg') no-repeat;
       border: none;
       background-color: transparent;
+      cursor: pointer;
     }
     .nav_desktop {
       display: none;
+      li {
+        cursor: pointer;
+        &:hover a{
+          color: @origy-bgc;
+        }
+      }
     }
     .logo {
       background: url('../assets/shared/desktop/logo.svg') no-repeat;
@@ -256,6 +263,9 @@ export default {
         line-height: 25px;
         text-decoration: underline;
         color: rgba(0, 0, 0, 0.5);
+        &:hover {
+          color: @origy-bgc;
+        }
       }
     }
     .cart_card {
@@ -271,6 +281,7 @@ export default {
             height: 64px;
           }
           .name_price {
+            width: 100px;
             .cart_name {
               font-size: 15px;
               line-height: 25px;
@@ -281,6 +292,11 @@ export default {
               font-weight: bold;
               line-height: 25px;
               color: rgba(0, 0, 0, 0.5);
+            }
+          }
+          .van-stepper {
+            .van-stepper__input {
+              margin: 0;
             }
           }
         }
@@ -333,6 +349,9 @@ export default {
       letter-spacing: 1px;
       color: #FFFFFF;
       cursor: pointer;
+      &:hover {
+        background: #FBAF85;
+      }
     }
   }
 }

@@ -93,6 +93,9 @@ export default {
         border: none;
         display: flex;
         align-items: center;
+        &:hover {
+          color: #D87D4A;
+        }
         img {
           margin-left: 13px;
           display: inline-block;

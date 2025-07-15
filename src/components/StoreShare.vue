@@ -66,6 +66,7 @@ export default {
     li {
       text-align: center;
       margin-bottom: 16px;
+      cursor: pointer;
       a {
         font-size: 13px;
         font-weight: bold;
@@ -73,6 +74,9 @@ export default {
         text-transform: uppercase;
         letter-spacing: 2px;
         color: #FFFFFF;
+      }
+      &:hover a {
+        color: @origy-bgc;
       }
     }
   }

@@ -65,6 +65,9 @@ export default {
     letter-spacing: 1px;
     color: #FFFFFF;
     cursor: pointer;
+    &:hover {
+      background: #FBAF85;
+    }
   }
 }
 

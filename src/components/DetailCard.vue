@@ -32,6 +32,7 @@
 </template>
 
 <script>
+import { Toast } from 'vant'
 export default {
   data () {
     return {
@@ -53,6 +54,7 @@ export default {
         item,
         count: this.addCount
       })
+      Toast.success('Successfully added')
       this.addCount = 1
     }
   }
@@ -137,6 +139,9 @@ export default {
       color: #FFFFFF;
       margin-left: 16px;
       cursor: pointer;
+      &:hover {
+        background: #FBAF85;
+      }
     }
   }
 }
