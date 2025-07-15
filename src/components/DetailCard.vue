@@ -141,6 +141,7 @@ export default {
       cursor: pointer;
       &:hover {
         background: #FBAF85;
+        transition: all 0.2s;
       }
     }
   }

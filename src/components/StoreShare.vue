@@ -77,6 +77,7 @@ export default {
       }
       &:hover a {
         color: @origy-bgc;
+        transition: all 0.2s;
       }
     }
   }

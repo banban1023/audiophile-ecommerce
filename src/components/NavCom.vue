@@ -174,6 +174,7 @@ export default {
         cursor: pointer;
         &:hover a{
           color: @origy-bgc;
+          transition: all 0.2s;
         }
       }
     }
@@ -265,6 +266,7 @@ export default {
         color: rgba(0, 0, 0, 0.5);
         &:hover {
           color: @origy-bgc;
+          transition: all 0.2s;
         }
       }
     }
@@ -351,6 +353,7 @@ export default {
       cursor: pointer;
       &:hover {
         background: #FBAF85;
+        transition: all 0.2s;
       }
     }
   }

@@ -95,6 +95,7 @@ export default {
         align-items: center;
         &:hover {
           color: #D87D4A;
+          transition: all 0.2s;
         }
         img {
           margin-left: 13px;
