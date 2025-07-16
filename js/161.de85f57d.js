@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkaudiophile_ecommerce"]=self["webpackChunkaudiophile_ecommerce"]||[]).push([[161],{9563:function(e,n,u){u.r(n),u.d(n,{default:function(){return l}});var i=function(){var e=this,n=e._self._c;return n("div",{staticClass:"index_nav"},[n("NavCom"),n("router-view")],1)},t=[],a=u(2021),c={name:"IndexView",components:{NavCom:a.A}},o=c,r=u(1656),s=(0,r.A)(o,i,t,!1,null,"14f18db1",null),l=s.exports}}]);
-//# sourceMappingURL=161.de85f57d.js.map
