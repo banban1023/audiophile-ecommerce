@@ -305,10 +305,15 @@ export default {
     otherItemsCount () {
       return Math.max(this.cartItems.length - 1, 0)
     }
-  }
-  // created () {
-  //   console.log(this.cart)
+  },
+  created () {
+    console.log(this.cart, 111)
   //   console.log(this.limitedCartItems, 5)
+  }
+  // mounted () {
+  //   if (!this.cart || Object.keys(this.cart).length === 0) {
+  //     this.$router.replace('/home')
+  //   }
   // }
 }
 </script>

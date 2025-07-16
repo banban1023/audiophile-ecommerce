@@ -9,7 +9,7 @@
           <router-link :to="item.to">{{item.name}}</router-link>
         </li>
       </ul>
-      <div class="dian">
+      <div class="dian" v-if="$route.path !== '/checkout'">
         <button class="nav_cart" @click="showCartBox">cart</button>
         <span class="count" v-if="totalCount">{{totalCount}}</span>
       </div>
